@@ -18,7 +18,7 @@ Git</h3></b>
 
 <b><h3>Depois disso</h3></b>
 
-<pre>cd ./implementing-tests-units-php/race/Tests
+<pre>cd ./Implementing_Units_Tests_PHP/race/Tests
 phpunit</pre>
 
 Pronto agora é refatorar e implementar.
