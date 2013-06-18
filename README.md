@@ -1,6 +1,6 @@
 <b><h3>Implementing Tests Units</h3></b>
 
-Simples desenvolvimento de testes unitários (indepentende de bibliotecas e/ou frameworks). 
+Simples desenvolvimento de testes unitários. 
 
 <b><h3>Instalação dos requisitos no Ubuntu 12.04 (Precise Pangolin)</h3></b>
 
@@ -11,7 +11,7 @@ sudo pear config-set auto_discover 1
 sudo pear install pear.phpunit.de/PHPUnit
 </pre>
 
-<b><h3>Baixando os fontes<br />
+<b><h3>Fontes<br />
 Git</h3></b>
 
 <pre>git clone http://github.com/luizhenriquedapieve/Implementing_Tests_Units_PHP.git</pre>
