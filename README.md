@@ -1,4 +1,4 @@
-<b><h3>Implementing Tests Units</h3></b>
+<b><h3>Implementing Units Tests PHP</h3></b>
 
 Simples desenvolvimento de testes unitários. 
 
@@ -14,7 +14,7 @@ sudo pear install pear.phpunit.de/PHPUnit
 <b><h3>Fontes<br />
 Git</h3></b>
 
-<pre>git clone http://github.com/luizhenriquedapieve/Implementing_Tests_Units_PHP.git</pre>
+<pre>git clone http://github.com/luizhenriquedapieve/Implementing_Units_Tests_PHP.git</pre>
 
 <b><h3>Depois disso</h3></b>
 
