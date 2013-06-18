@@ -1,6 +1,7 @@
 <b><h3>Implementing Units Tests PHP</h3></b>
 
-Simples desenvolvimento de testes unitários. 
+É um projeto de trabalhado de conclusão de curso em Análise e Desenvolvimento de Sistemas do Instituto Federal Farroupilha - Campus São Vicente do Sul - RS.
+O projeto conciste em um simulação de uma corrida de carro, aplicando testes unitários em seus métodos.
 
 <b><h3>Instalação dos requisitos no Ubuntu 12.04 (Precise Pangolin)</h3></b>
 
