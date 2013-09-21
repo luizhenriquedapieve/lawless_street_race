@@ -2,7 +2,7 @@
 include_once 'bootstrap.php';
 
 $carRacer1 = new Car();
-$carRacer1->setEngine(new Engine(105), 'Saveiro 1.6');
+$carRacer1->setEngine(new Engine(205), 'Saveiro 1.6');
 $racer1 = new Racer('Luiz', $carRacer1);
 
 $carRacer2 = new Car();
@@ -16,10 +16,11 @@ $quantityRacers = count($race->getRacers());
 
 $street = new Street(1000);
 
+$race->addTrack($street);
 echo "==================================================================================================================== \n";
 echo "| A disputa é entre ".$quantityRacers . " corredores. Em uma pista de ".$street->getDistance()." m.  \n";
 echo "| O corredor ".$racer1->getName()." está com um(a) ". $carRacer1->getModel()." que tem de final ".$carRacer1->getTopSpeed(). "km/h. \n";
 echo "| O corredor ".$racer2->getName()." está com um(a) ". $carRacer2->getModel()." que tem de final ".$carRacer2->getTopSpeed(). "km/h. \n";
 echo "==================================================================================================================== \n";
-
-$race->startRace($carRacer1->getHp(), $carRacer2->getHp(), $street->getDistance());
+//$carRacer1->getHp(), $carRacer2->getHp(), $street->getDistance(), $carRacer1->getTopSpeed(),  $carRacer2->getTopSpeed()
+$race->startRace();

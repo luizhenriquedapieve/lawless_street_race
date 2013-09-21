@@ -30,5 +30,4 @@ class RacerTest extends PHPUnit_Framework_TestCase
         {
              $this->assertEquals('Muscle', $this->racer->getModelCar());
         }
-        
 }

@@ -15,7 +15,7 @@ class Acessories_TurboTest extends PHPUnit_Framework_TestCase
 	
 	public function testUseIt()
 	{
-		$this->assertEquals(99, $this->acessorie->useIt());
+		$this->assertEquals(70, $this->acessorie->useIt());
 	}
 	
 	public function testGetName()

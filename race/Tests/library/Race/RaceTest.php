@@ -6,8 +6,11 @@ class RaceTest extends PHPUnit_Framework_TestCase
 	protected $carB;
 	protected $racerA;
 	protected $racerB;
-	
-	public function setUp()
+  
+        protected $street;
+
+
+        public function setUp()
 	{
             $this->race = new Race();
             
@@ -18,6 +21,7 @@ class RaceTest extends PHPUnit_Framework_TestCase
             $this->carB = new Car();
             $this->carB->setEngine(new Engine(230), 'Muscle');
             $this->racerB = new Racer('Vin Diesel', $this->carB);
+       
             
         }
         
@@ -39,15 +43,19 @@ class RaceTest extends PHPUnit_Framework_TestCase
 	
 	public function testGetMeter()
 	{
-		$this->assertEquals(162.0, $this->race->getMeter(45));
+		$this->assertEquals(162.0, $this->race->getMeter(45, 20));
 	}
 	
-	/*public function testStartRace()
+        public function testTrack()
+        {
+                $this->race->addTrack(new Street(1000));
+                $this->assertInstanceOf('Street',$this->race->getTrack());
+        }
+
+	public function testStartRace()
 	{	
-			$street = new Street(600);
-			
-            $this->assertEquals($this->racerB->getName(), $this->race->startRace($this->carA->getHp(),$this->carB->getHp(),$street->getDistance()));
-	}*/
+                
+	}
 	
         
 }

@@ -83,6 +83,7 @@ class Race
             $carA = $this->racers['racerA']->getCar();
             $carB = $this->racers['racerB']->getCar();
             
+            
             $distanceStreet = $this->getTrack()->getDistance();
             
             for($time = 1; $time <= 60; $time++)
@@ -142,8 +143,8 @@ class Race
                             exit();
                         }
                         
-                        echo "Carro B está com a velocidade de ".$speedCurrentCarB." km/h e percorreu ".$MeterCurrentCarB." m \n";
-                        echo "Carro A está com a velocidade de ".$speedCurrentCarA." km/h e percorreu ".$MeterCurrentCarA." m \n";
+                        echo "Carro B está com a velocidade de ".$speedCurrentCarB." km/h e percorreu ".$MeterCurrentCarB." km/s \n";
+                        echo "Carro A está com a velocidade de ".$speedCurrentCarA." km/h e percorreu ".$MeterCurrentCarA." km/s \n";
                     }   
             }
         }

@@ -11,6 +11,11 @@ class CarTest extends PHPUnit_Framework_TestCase
             $this->car->setEngine($this->engine, 'Muscle');
 	}
         
+        public function tearDown()
+        {
+            $this->car = NULL;
+        }
+        
         public function testCarConstructor()
 	{
             $this->assertTrue($this->car instanceof Car);
@@ -28,12 +33,12 @@ class CarTest extends PHPUnit_Framework_TestCase
         
         public function testGetTopSpeed()
         {
-            $this->assertEquals((105*1.6), $this->car->getTopSpeed());
+            $this->assertEquals(168, $this->car->getTopSpeed());
         }
         
         public function testGetModel()
         {
-             $this->assertEquals('Muscle', $this->car->getModel());
+            $this->assertEquals('Muscle', $this->car->getModel());
         }
 
 }

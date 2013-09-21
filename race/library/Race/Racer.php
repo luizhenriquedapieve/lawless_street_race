@@ -19,5 +19,9 @@ class Racer
     {
             return $this->car->getModel();
     }
- 
+    
+    public function getCar()
+    {
+            return $this->car;
+    }
 }

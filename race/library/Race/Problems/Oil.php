@@ -1,5 +1,5 @@
 <?php
-//Class óleo
+//Class Oil
 class Problems_Oil implements StreetProblems
 {
     protected $quantity;
@@ -7,17 +7,13 @@ class Problems_Oil implements StreetProblems
 
     public function setQuantity($quantity)
     {
-
         !is_string($quantity) ? $this->quantity = $quantity : $this->quantity = NULL;
         return $this->quantity;
-
     }
 
     public function getDamage()
     {
-
-       !empty($this->quantity) ? $this->damage = $this->quantity * 0.0010 : $this->quantity = NULL ;
-
-        return $this->damage;
+       !empty($this->quantity) ? $this->damage = $this->quantity * 0.0010 : $this->damage = NULL ;
+       return $this->damage;
     }
 }
