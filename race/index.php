@@ -22,5 +22,5 @@ echo "| A disputa é entre ".$quantityRacers . " corredores. Em uma pista de ".$
 echo "| O corredor ".$racer1->getName()." está com um(a) ". $carRacer1->getModel()." que tem de final ".$carRacer1->getTopSpeed(). "km/h. \n";
 echo "| O corredor ".$racer2->getName()." está com um(a) ". $carRacer2->getModel()." que tem de final ".$carRacer2->getTopSpeed(). "km/h. \n";
 echo "==================================================================================================================== \n";
-//$carRacer1->getHp(), $carRacer2->getHp(), $street->getDistance(), $carRacer1->getTopSpeed(),  $carRacer2->getTopSpeed()
+
 $race->startRace();

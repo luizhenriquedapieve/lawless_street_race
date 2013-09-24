@@ -5,22 +5,28 @@ class Car
     protected $engine;
     protected $model;
         
-	public function setEngine(CarEngine $engine, $modelCar)
+	public function setEngine(CarEngine $engine)
 	{
-		$this->engine = $engine;
-                $this->model = $modelCar;
-                return $this->engine;
+            $this->engine = $engine;
+            return $this->engine;
 	}
 	
 	public function getHp()
-	{
-		return $this->engine->getHp();
+	{   
+            //Function for interface
+            return $this->engine->getHp();
 	}
 	
 	public function getTopSpeed()
 	{
-		return $this->engine->getHp() * $this->kmPerHourPerHp;
+            return $this->engine->getHp() * $this->kmPerHourPerHp;
 	}
+        
+        public function setModel($modelCar)
+        {
+            $this->model = $modelCar;
+            return $this->model;
+        }
         
         public function getModel()
         {

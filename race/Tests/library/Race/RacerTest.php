@@ -7,7 +7,8 @@ class RacerTest extends PHPUnit_Framework_TestCase
 	public function setUp()
 	{
             $this->car = new Car();
-            $this->car->setEngine(new Engine(105), 'Muscle');
+            $this->car->setEngine(new Engine(105));
+            $this->car->setModel('Muscle');
             $this->racer = new Racer('NOME', $this->car);
 	}
 	
@@ -18,7 +19,7 @@ class RacerTest extends PHPUnit_Framework_TestCase
         
 	public function testRacerConstructor()
 	{
-		$this->assertTrue($this->racer instanceof Racer);
+            $this->assertTrue($this->racer instanceof Racer);
 	}
 	
         public function testGetName()

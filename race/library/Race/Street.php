@@ -10,6 +10,6 @@ class Street
 
         public function getDistance()
         {
-                return $this->distance;
+            return $this->distance;
         }
 }

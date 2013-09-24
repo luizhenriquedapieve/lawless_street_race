@@ -13,7 +13,7 @@ class EngineTest extends PHPUnit_Framework_TestCase
             $this->engine = NULL;
         }
 
-        public function testCarConstructor()
+        public function testEngineConstructor()
 	{
             $this->assertTrue($this->engine instanceof Engine);
 	}

@@ -2,13 +2,11 @@
 class CarTest extends PHPUnit_Framework_TestCase
 {
     protected $car;
-    protected $engine;
 
         public function setUp()
 	{
             $this->car = new Car();
-            $this->engine = new Engine(105);
-            $this->car->setEngine($this->engine, 'Muscle');
+            $this->car->setEngine(new Engine(105));
 	}
         
         public function tearDown()
@@ -23,7 +21,7 @@ class CarTest extends PHPUnit_Framework_TestCase
 
         public function testSetEngine()
         {
-            $this->assertEquals($this->engine, $this->car->setEngine($this->engine, 'Muscle'));
+            $this->assertEquals(new Engine(105), $this->car->setEngine(new Engine(105)));
         }
         
         public function testGetHp()
@@ -36,8 +34,27 @@ class CarTest extends PHPUnit_Framework_TestCase
             $this->assertEquals(168, $this->car->getTopSpeed());
         }
         
+        /**
+        * @dataProvider dataProviderSetModel
+        */
+        public function testeSetModel($expected, $result)
+        {
+            $this->assertEquals($expected, $this->car->setModel($result));
+        }
+
+        public function dataProviderSetModel()
+        {
+            return array(
+                array('Exotic', 'Exotic'),
+                array('Muscle', 'Muscle'),
+                array('Classic', 'Classic'),
+                array('Simple', 'Simple')
+            );
+        }
+
         public function testGetModel()
         {
+            $this->car->setModel('Muscle');
             $this->assertEquals('Muscle', $this->car->getModel());
         }
 

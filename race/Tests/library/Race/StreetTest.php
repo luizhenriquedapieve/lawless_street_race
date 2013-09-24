@@ -1,4 +1,6 @@
 <?php
+include '../../../library/Race/Street.php';
+
 class StreetTest extends PHPUnit_Framework_TestCase
 {
         protected $street;
@@ -15,7 +17,7 @@ class StreetTest extends PHPUnit_Framework_TestCase
         
         public function testCarConstructor()
 	{
-		$this->assertTrue($this->street instanceof Street);
+            $this->assertTrue($this->street instanceof Street);
 	}
         
         public function testGetDistance()
