@@ -57,7 +57,6 @@ class CarTest extends PHPUnit_Framework_TestCase
             $this->car->setModel('Muscle');
             $this->assertEquals('Muscle', $this->car->getModel());
         }
-
 }
 
 

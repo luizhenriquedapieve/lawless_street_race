@@ -10,10 +10,4 @@ class Acessories_Turbo implements CarAcessories
 	{
 		return 'Turbo';
 	}
-	
-	public function __toString()
-	{
-		return $this->getName();
-	}
-
 }

@@ -29,6 +29,11 @@ class RacerTest extends PHPUnit_Framework_TestCase
         
         public function testGetModelCar()
         {
-             $this->assertEquals('Muscle', $this->racer->getModelCar());
+            $this->assertEquals('Muscle', $this->racer->getModelCar());
+        }
+        
+        public function testGetCar()
+        {
+            $this->assertEquals($this->car, $this->racer->getCar());
         }
 }

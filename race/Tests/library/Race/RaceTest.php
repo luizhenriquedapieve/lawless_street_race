@@ -43,6 +43,7 @@ class RaceTest extends PHPUnit_Framework_TestCase
 	public function testGetMeter()
 	{
             $this->assertEquals(162.0, $this->race->getMeter(45, 20));
+            $this->assertEquals(80.0, $this->race->getMeter(20, 50));
 	}
 	
         public function testTrack()
@@ -50,6 +51,23 @@ class RaceTest extends PHPUnit_Framework_TestCase
             $this->race->addTrack(new Street(1000));
             $this->assertInstanceOf('Street',$this->race->getTrack());
         }
+
+        /**
+        * @dataProvider dataProviderGetSpeedCurrent
+        */
+        public function testGetSpeedCurrent($expected,$power,$time,$topSpeedCar)
+        {
+            $this->assertEquals($expected, $this->race->getSpeedCurrent($power, $time, $topSpeedCar));
+        }
+        
+        public function dataProviderGetSpeedCurrent() {
+        return array(
+            array(60, 20, 3, 80),
+            array(100, 50, 3, 100),
+            array(80, 50, 2, 80),
+            array(90, 45, 2, 100)
+        );
+    }
 
 	public function testStartRace()
 	{	

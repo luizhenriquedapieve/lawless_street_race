@@ -10,10 +10,4 @@ class Acessories_EngineExtreme implements CarAcessories
 	{
 		return 'EngineExtreme';
 	}
-	
-	public function __toString()
-	{
-		return $this->getName();
-	}
-
 }

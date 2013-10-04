@@ -29,11 +29,11 @@ class Race
         {   
                 if ($speed >= $topSpeed)
                 {
-                    $speed = $speed * 3.6;
+                    $meter = $speed * 3.6;
                     
-                    return $speed;
+                    return $meter;
                 }
-                return $speed * 3.6;
+                return $topSpeed * 1.6;
         }
 
         public function getSpeedCurrent($power,$time, $topSpeedCar)
@@ -82,7 +82,7 @@ class Race
             
             $carA = $this->racers['racerA']->getCar();
             $carB = $this->racers['racerB']->getCar();
-            
+             
             $distanceStreet = $this->getTrack()->getDistance();
             
             for($time = 1; $time <= 60; $time++)

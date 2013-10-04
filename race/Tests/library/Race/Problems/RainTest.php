@@ -32,7 +32,13 @@ class Problems_RainTest extends PHPUnit_Framework_TestCase
             $this->rain->setTime(3);
             $this->rain->setMl(5);
             $this->assertEquals(15, $this->rain->getDamage());
-            
+        }
+        
+        public function testGetDamageNull()
+        {       
+            $this->rain->setTime('3');
+            $this->rain->setMl('3');
+            $this->assertEquals(NULL, $this->rain->getDamage());
         }
         
         
