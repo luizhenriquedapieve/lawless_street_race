@@ -118,11 +118,11 @@ class Race
 
         		case 0:
         			$msg .= "O oleo afetou o carro A \n";
-        			$this->speedCurrentCarA = $this->speedCurrentCarA - ($damageOil * 20);
+        			$this->speedCurrentCarA = $this->speedCurrentCarA - ($damageOil * 30);
         			break;
         		case 1:
         			$msg .= "O oleo afetou o carro B \n";
-        			$this->speedCurrentCarB = $this->speedCurrentCarB - ($damageOil * 20);
+        			$this->speedCurrentCarB = $this->speedCurrentCarB - ($damageOil * 30);
         			break;
         		case 4:
         			$msg .= "Carro A acionou o ".$turboName."\n";
