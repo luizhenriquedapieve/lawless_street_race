@@ -1,5 +1,5 @@
 <?php
-include '../../../library/Race/Street.php';
+#include '../../../library/Race/Street.php';
 
 class StreetTest extends PHPUnit_Framework_TestCase
 {
