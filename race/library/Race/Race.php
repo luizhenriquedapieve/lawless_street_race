@@ -64,25 +64,49 @@ class Race
             {
                 if ($speedCurrentCarA == 0)
                 {
+<<<<<<< HEAD
+=======
+                    //printf($currentSpeedMsg, 'A', 0, $lastMeterA);
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
                     $msg .= "Carro A está com velocidade de  0 km/h e percorreu ".$lastMeterA."m \n";
                 }
                 else
                 {
+<<<<<<< HEAD
                 	$msg .= "Carro A está com velocidade de ".$this->speedCurrentCarA." km/h e percorreu ".$lastMeterA."m \n";
                 }
 
+=======
+                	//printf($currentSpeedMsg, 'A', $this->speedCurrentCarA, $lastMeterA);
+                    $msg .= "Carro A está com velocidade de ".$this->speedCurrentCarA." km/h e percorreu ".$lastMeterA."m \n";
+                }
+
+                //printf($currentSpeedMsg, 'B', $this->speedCurrentCarB, $lastMeterB);
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
                 $msg .= "Carro B está com velocidade de ".$this->speedCurrentCarB." km/h e percorreu ".$lastMeterB."m \n";
 
             }else{
 
+<<<<<<< HEAD
+=======
+                //printf($currentSpeedMsg, 'A', $this->speedCurrentCarA, $lastMeterA);
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
                 $msg .= "Carro A está com velocidade de ".$this->speedCurrentCarA." km/h e percorreu ".$lastMeterA."m \n";
 
                 if ($speedCurrentCarB == 0)
                 {
+<<<<<<< HEAD
+=======
+                	//printf($currentSpeedMsg, 'B', 0, $lastMeterB);
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
                     $msg .= "Carro B está com velocidade de 0 km/h e percorreu ".$lastMeterB."m \n";
                 }
                 else
                 {
+<<<<<<< HEAD
+=======
+                    //printf($currentSpeedMsg, 'B', $this->speedCurrentCarB, $lastMeterB);
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
                     $msg .= "Carro B está com velocidade de ".$this->speedCurrentCarB." km/h e percorreu ".$lastMeterB."m \n";
                 }
             }
@@ -101,11 +125,20 @@ class Race
         	$oil = new Problems_Oil();
         	$oil->setQuantity(1000);
         	$damageOil = $oil->getDamage();
+<<<<<<< HEAD
 
         	$turbo = new Acessories_Turbo();
         	$turboSet = $turbo->useIt();
         	$turboName = $turbo->getName();
 
+=======
+
+        	$turbo = new Acessories_Turbo();
+        	$turboSet = $turbo->useIt();
+        	$turboName = $turbo->getName();
+
+        	//$random = rand(0, 10);
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
                 $msg = "";
         	switch ($random){
 
@@ -148,6 +181,14 @@ class Race
 
         public function startRace($racerA, $racerB, $distanceStreet)
         {
+<<<<<<< HEAD
+=======
+//            $carA = $this->racers['racerA']->getCar();
+//            $carB = $this->racers['racerB']->getCar();
+
+//            $distanceStreet = $this->getTrack()->getDistance();
+
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
             $carA = $racerA->getCar();
             $carB = $racerB->getCar();
             
@@ -162,21 +203,54 @@ class Race
                     echo "******************************** \n";
                     echo "Ao(s) {$time}s de corrida: \n";
 
+<<<<<<< HEAD
+=======
+                    //Atribuindo problemas
+                    
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
 		    if ($time != 1 || $time != 2 || $time != 3)
 		    {
                     	echo $this->tryOnesLuck(rand(0, 10));
 		    }
 
+<<<<<<< HEAD
                         $meterCurrentCarA = $this->getDistance($this->speedCurrentCarA,$carA->getTopSpeed());
                         $lastMeterA = $this->getLastMeter($lastMeterA,$meterCurrentCarA);
 
                         $meterCurrentCarB = $this->getDistance($this->speedCurrentCarB,$carB->getTopSpeed());
                         $lastMeterB = $this->getLastMeter($lastMeterB,$meterCurrentCarB);
+=======
+                    /*if ($this->speedCurrentCarA < 0 )
+                    {
+                        $this->speedCurrentCarA = 0;
+                    }
+                    else
+                    {*/
+                        $meterCurrentCarA = $this->getDistance($this->speedCurrentCarA,$carA->getTopSpeed());
+                        $lastMeterA = $this->getLastMeter($lastMeterA,$meterCurrentCarA);
+                    /*}
+
+                    if ($this->speedCurrentCarB < 0 )
+                    {
+                        $this->speedCurrentCarB = 0;
+
+                    }
+                    else
+                    {*/
+                        $meterCurrentCarB = $this->getDistance($this->speedCurrentCarB,$carB->getTopSpeed());
+                        $lastMeterB = $this->getLastMeter($lastMeterB,$meterCurrentCarB);
+                    /*}*/
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
                     
                     $winner = $this->verifyWinner($lastMeterA, $lastMeterB,$distanceStreet);
                     
                     if (!empty($winner))
                     {
+<<<<<<< HEAD
+=======
+//                        return $winner;
+//                        exit();
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
                           break;
                     }
                     

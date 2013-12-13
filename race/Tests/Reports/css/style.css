@@ -6,6 +6,7 @@ body {
  width: 600px;
 }
 
+<<<<<<< HEAD
 .table td {
  padding-top: 3px;
  padding-bottom: 3px;
@@ -16,6 +17,8 @@ body {
  padding-bottom: 0;
 }
 
+=======
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
 .table .progress {
  margin-bottom: inherit;
 }

@@ -6,7 +6,11 @@ class RaceTest extends PHPUnit_Framework_TestCase
 	protected $carB;
 	protected $racerA;
 	protected $racerB;
+<<<<<<< HEAD
 	protected $mock;
+=======
+
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
         protected $street;
 
 
@@ -70,6 +74,15 @@ class RaceTest extends PHPUnit_Framework_TestCase
         			array(800, 41, $car2)
         	);
 
+<<<<<<< HEAD
+=======
+//         return array(
+//             array(60, 20, 3, 80),
+//             array(100, 50, 3, 100),
+//             array(80, 50, 2, 80),
+//             array(90, 45, 2, 100)
+//         );
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
         }
 
         /**
@@ -88,7 +101,10 @@ class RaceTest extends PHPUnit_Framework_TestCase
             array(45, 22.5, 22.5)
         );
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
         public function testGetResultPerSecond()
         {
             
@@ -111,6 +127,15 @@ Carro B está com velocidade de 0 km/h e percorreu 200m
 Carro B está com velocidade de  km/h e percorreu 200m 
 ';
             $this->assertEquals( $msgReturn4 , $this->race->getResultPerSecond(150, 200, 10, 1));
+<<<<<<< HEAD
+=======
+            
+//            $this->assertStringMatchesFormat('%A', $this->race->getResultPerSecond(200, 100, 400));
+//            $this->assertStringMatchesFormat('%A', $this->race->getResultPerSecond(150, 200, 400));
+//            
+//            $this->assertStringMatchesFormat('%A', $this->race->getResultPerSecond(200, 100, 400, 10, 3));
+//            $this->assertStringMatchesFormat('%A', $this->race->getResultPerSecond(150, 200, 400, 4, 5));
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
         }
         
         public function testVerifyWinner()
@@ -119,6 +144,7 @@ Carro B está com velocidade de  km/h e percorreu 200m
             $this->assertEquals("Vencedor da corrida é o carro B\n",  $this->race->verifyWinner(50,100,100));
             $this->assertNull($this->race->verifyWinner(50,80,100));
         }
+<<<<<<< HEAD
 
         public function testTryOnesLuck()
         {
@@ -148,10 +174,46 @@ Carro B está com velocidade de  km/h e percorreu 200m
 		    $carRacer2->setEngine(new Engine(130));
 
             $racer1 = new Racer('Teste 1', $carRacer1);
+=======
+
+        public function testTryOnesLuck()
+        {
+            $this->assertEquals("O oleo afetou o carro A \n", $this->race->tryOnesLuck(0));
+            $this->assertEquals("O oleo afetou o carro B \n", $this->race->tryOnesLuck(1));
+            $this->assertEquals("Carro A acionou o Turbo\n", $this->race->tryOnesLuck(4));
+            $this->assertEquals("Carro B acionou o Turbo\n", $this->race->tryOnesLuck(5));
+        }
+
+        public function testStartRace()
+	{
+            $carRacer1 = new Car();
+            $carRacer1->setEngine(new Engine(105));
+
+            $racer1 = new Racer('Luiz', $carRacer1);
+
+            $carRacer2 = new Car();
+            $carRacer2->setEngine(new Engine(230));
+
+            $racer2 = new Racer('Vin Diesel', $carRacer2);
+            
+            $street = new Street(1000);
+            
+            $expected = 'Vencedor da corrida é o carro B
+';
+            $this->assertEquals($expected, $this->race->startRace($racer1, $racer2, $street->getDistance()));
+            
+            $carRacer1->setEngine(new Engine(205));
+
+            $racer1 = new Racer('Teste 1', $carRacer1);
+
+            $carRacer2->setEngine(new Engine(130));
+
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
             $racer2 = new Racer('Teste 2', $carRacer2);
 
             $expected = 'Vencedor da corrida é o carro A
 ';
+<<<<<<< HEAD
             $this->assertEquals($expected, $this->race->startRace($racer1, $racer2, 1000));
             
 	}
@@ -207,6 +269,11 @@ Carro B está com velocidade de  km/h e percorreu 200m
             
 	}*/
 
+=======
+            $this->assertEquals($expected, $this->race->startRace($racer1, $racer2, $street->getDistance()));
+            
+	}
+>>>>>>> 4e3e03ac42ddab93a243ec13ca32f2bb3ba3e82d
 
 
 }
